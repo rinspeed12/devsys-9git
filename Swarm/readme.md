@@ -12,17 +12,23 @@
 
 ## Задача 2 
 
+![enter image description here](https://raw.githubusercontent.com/rinspeed12/devsys-9git/main/Swarm/node-ls.png)
 
 ## Задача 3
 
+![enter image description here](https://raw.githubusercontent.com/rinspeed12/devsys-9git/main/Swarm/docker-services.png)
 
 ## Задача 4 
 
-Команда не дает возможности получить доступ к зашифрованным ключам после перезапуска докера. Ключи временно перемещаются из Raft логов в оперативную память. 
+![enter image description here](https://raw.githubusercontent.com/rinspeed12/devsys-9git/main/Swarm/autolock.png)
 
-Для того, чтобы разблокировать ключи, необходимо будет снять вручную опцию autolock:
+Команда не дает возможности получить доступ к зашифрованным ключам после перезапуска докера. Ключи временно перемещаются из Raft логов в оперативную память, выводится на экран пользователю для ручного сохранения (в блокнот или менеджер паролей).
+
+Для того, чтобы разблокировать swarm, необходимо будет снять вручную опцию autolock:
 
 ```
 docker swarm update --autolock=false && docker swarm unlock
 ```
+Указать ключ
+
 ## Спасибо за проверку!
